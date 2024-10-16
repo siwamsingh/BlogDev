@@ -29,14 +29,14 @@ function Home() {
         )
     }
     return (
-        <div className='w-full py-8'>
-                <div className='flex flex-wrap'>
+        <div className='w-full min-h-screen'>
+                <div className='flex flex-wrap max-w-screen-xl   mx-auto'>
                     {posts.map((post) => (
-                        <div key={post.$id} className='p-2'>
+                        <div key={post.$id} className='sm:max-w-[50%] lg:max-w-[33.3%] px-2 py-3 sm:p-3'>
                             <PostCard {...post} />
                         </div>
                     ))}
-                </div>
+                </div> 
         </div>
     )
 }
