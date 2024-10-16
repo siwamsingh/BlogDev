@@ -33,7 +33,7 @@ export default function Post() {
     };
 
     return post ? (
-        <div className="max-w-screen-xl mx-auto py-8 sm:py-16">
+        <div className="max-w-screen-lg mx-auto py-8 sm:py-16">
             <Container>
                 <div className=" flex justify-center  relative border-b border-black dark:border-white pb-2 mb-8">
                     <img
