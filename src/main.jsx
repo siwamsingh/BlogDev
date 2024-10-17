@@ -79,8 +79,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
+      <div className='min-w-[320px]'>
         <Provider store={store}>
             <RouterProvider router={router} />
         </Provider>
+        </div>
     </React.StrictMode>,
 )

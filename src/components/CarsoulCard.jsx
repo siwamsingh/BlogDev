@@ -1,23 +1,27 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function CarsoulCard({imageUrl,title,content,link}) {
+function CarsoulCard({ image, title, content, linkUrl }) {
   return (
-    <div className='max-w-screen-xl w-screen'>
-      <div className="card card-side bg-base-100 shadow-xl">
-  <figure>
-    <img
-      src={imageUrl || "https://img.freepik.com/free-vector/organic-flat-about-me-concept-illustrated_23-2148909309.jpg?t=st=1729153952~exp=1729157552~hmac=d79d721893744f1673fa6c14af4df5d85b4b2a00266c3c88c2a2fd6d5830b10d&w=740"}
-      className=' object-cover aspect-[9:16] sm:aspect-[8/5] my-4 sm:my-8 h-[28vh] sm:h-[30vh] lg:h-[40vh]'
-    />
-  </figure>
-  <div className="card-body my-4 sm:my-8">
-    <h2 className="card-title ">{title}</h2>
-    <p>{content}</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Read</button>
-    </div>
-  </div>
-</div>
+    <div className='max-w-screen-xl w-screen '>
+      <Link to={linkUrl}>
+        <div className="card card-side bg-gray-100 dark:bg-gray-900 shadow-xl max-h-[29vh] sm:max-h-screen py-4 sm:py-8">
+          <figure className='w-[40%]'>
+            <img
+              src={image}
+              className='object-cover aspect-[9:16] sm:aspect-[8/5] h-[28vh] sm:h-[30vh] lg:h-[40vh]'
+            />
+          </figure>
+          <div className="card-body w-[60%] overflow-hidden shadow-inner ">
+            <h2 className="card-title text-xl sm:text-3xl text-gray-900 dark:text-white">
+              {title}
+            </h2>
+            <p className="line-clamp-4 text-sm sm:text-lg text-gray-700 dark:text-gray-300">
+              {content}
+            </p>
+          </div>
+        </div>
+      </Link>
     </div>
   )
 }

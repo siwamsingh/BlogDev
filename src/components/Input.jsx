@@ -1,7 +1,7 @@
 import React, { useId } from "react";
 
 const Input = React.forwardRef(function Input(
-  { label, type = "text", className = "", curLimit, limit, ...props },
+  { label, type = "text", className = "", curLimit, limit,maxSize, ...props },
   ref
 ) {
   const id = useId();
@@ -19,6 +19,7 @@ const Input = React.forwardRef(function Input(
           <>
             <span className={`${curLimit > limit && "text-red-500"}`}>{curLimit}</span>/{limit}
           </> : <></>}
+          {maxSize && <span>*file size &lt; {maxSize}</span> }
         </span>
       </div>
       <input

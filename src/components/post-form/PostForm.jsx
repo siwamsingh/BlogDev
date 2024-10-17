@@ -118,6 +118,7 @@ export default function PostForm({ post }) {
           className="mb-6"
           accept="image/png, image/jpg, image/jpeg, image/gif"
           {...register("image", { required: !post })}
+          maxSize={"2mb"}
         />
         {post && (
           <div className="w-full mb-4">
