@@ -135,11 +135,12 @@ export default function PostForm({ post }) {
           className="mb-6"
           {...register("status", { required: true })}
         />
-        <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="  w-fit md:w-full mx-auto px-4 md:px-0 ">
+        <Button disabled={true} type="submit" bgColor={post ? "bg-green-500" : undefined} className="  w-fit md:w-full mx-auto px-4 md:px-0 ">
           <div className=" mx-auto w-fit md:w-full py-2">
             {post ? "Update" : "Submit"}
           </div>
         </Button>
+        
       </div>
     </form>
   );

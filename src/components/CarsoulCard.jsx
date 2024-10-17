@@ -12,7 +12,7 @@ function CarsoulCard({ image, title, content, linkUrl }) {
               className='object-cover aspect-[9:16] sm:aspect-[8/5] h-[28vh] sm:h-[30vh] lg:h-[40vh]'
             />
           </figure>
-          <div className="card-body w-[60%] overflow-hidden shadow-inner ">
+          <div className="card-body w-[60%] overflow-hidden ">
             <h2 className="card-title text-xl sm:text-3xl text-gray-900 dark:text-white">
               {title}
             </h2>
