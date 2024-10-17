@@ -1,8 +1,9 @@
 import React from 'react'
-import { Container, Logo, LogoutBtn } from '../index'
+import { Logo, LogoutBtn } from '../index'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { TypeAnimation } from 'react-type-animation';
 
 function Header() {
   const authStatus = useSelector((state) => state.auth.status)
@@ -48,7 +49,27 @@ function Header() {
               <Logo width='70px' />
 
             </Link>
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Blog Phobia</span>
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <TypeAnimation
+                sequence={[
+                  'Blog Dev',
+                  3000,
+                  '',
+                  3000,
+                  'Blog ved?',
+                  3000,
+                  'Blog Dev✓',
+                  4000,
+                  'Blog',
+                  () => {
+                    console.log('Sequence completed');
+                  },
+                ]}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+              />
+            </span>
           </div>
           <div className="flex  items-center justify-center">
             {authStatus && (
@@ -66,7 +87,7 @@ function Header() {
             <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
               {navItems.map((item) =>
                 item.active ? (
-                  <li key={item.name}>
+                  <li key={item.name} >
                     <button
                       onClick={() => navigate(item.slug)}
                       className="text-gray-900 dark:text-white hover:underline" aria-current="page"

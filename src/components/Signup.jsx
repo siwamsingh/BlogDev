@@ -83,7 +83,7 @@ function Signup() {
           placeholder="Enter your password"
           {...register("password", { required: true })}
         />
-        <Button type="submit" className="w-full">
+        <Button type="submit" className="w-full py-2 sm:py-3">
           Create Account
         </Button>
       </div>

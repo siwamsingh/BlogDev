@@ -73,7 +73,7 @@ function Login() {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full py-2 sm:py-3">
               Sign in
             </Button>
           </div>
